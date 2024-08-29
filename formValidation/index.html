@@ -1,0 +1,103 @@
+<!-- ******** Registration Form ********
+  - Name is required, must be at least 8 characters.
+  - Password and confirm password must match, and both are required fields.
+  - Phone must be 10 digits.
+  - Email, must be on email format.
+  - Country is required
+  - Gender must be selected.
+  - Should accept term and condition before submit.
+  - Disable submit button until, all these conditions are satisifed.
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Client Side Form Validation</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <form
+      id="registrationForm"
+      action="index.html"
+      method="post"
+      class="registrationForm"
+    >
+      <div class="form-group">
+        <label for="fullName">Full Name:</label>
+        <input
+          type="text"
+          name="fullName"
+          id="fullName"
+          placeholder="Enter Your Name"
+        />
+        <div class="error" id="nameErr"></div>
+      </div>
+
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input
+          type="password"
+          name="password"
+          id="password"
+          placeholder="Password"
+        />
+        <div class="error" id="passwordErr"></div>
+      </div>
+
+      <div class="form-group">
+        <label for="confirmPassword">Confirm Password</label>
+        <input
+          type="password"
+          name="confirmPassword"
+          id="confirmPassword"
+          placeholder="Confirm Password"
+        />
+        <div class="error" id="passwordErr"></div>
+      </div>
+
+      <div class="form-group">
+        <label for="phone">Phone</label>
+        <input type="text" name="phone" id="phone" placeholder="Phone" />
+      </div>
+      <div class="error" id="phoneErr"></div>
+
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" placeholder="Email" />
+      </div>
+      <div class="error" id="emailErr"></div>
+
+      <div class="form-group">
+        <label for="country">Country</label>
+        <select id="country">
+          <option value="">Select Country</option>
+          <option value="nepal">Nepal</option>
+          <option value="india">India</option>
+          <option value="australia">Australia</option>
+        </select>
+      </div>
+      <div class="error" id="countryErr"></div>
+
+      <div class="form-group">
+        <label for="gender">Gender</label>
+        <input type="radio" value="Male" name="genderGroup" /> Male
+        <input type="radio" value="Female" name="genderGroup" /> Female
+      </div>
+      <div class="error" id="genderErr"></div>
+
+      <div class="form-group">
+        <input type="checkbox" name="term" id="tnc" /> I accept all the
+        <a href="#">terms and condition.</a>
+      </div>
+      <div class="error" id="tncErr"></div>
+
+      <div class="from-group">
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+      </div>
+    </form>
+
+    <script src="script.js"></script>
+  </body>
+</html>

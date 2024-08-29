@@ -1,0 +1,24 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.registrationForm {
+  margin: 5rem auto;
+  width: 60%;
+  border: 2px solid #f2f2f2;
+  padding: 2rem;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+
+  input {
+    padding: 0.5rem;
+  }
+}
+
+.error {
+  color: red;
+}
